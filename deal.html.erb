@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Poker</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<h1>Welcome to the KIEI-925 Casino!</h1>
+
+<%
+	number1=["ace",2,3,4,5,6,7,8,9,10,"jack", "queen", "king"].sample
+	number2=["ace",2,3,4,5,6,7,8,9,10,"jack", "queen", "king"].sample
+	number3=["ace",2,3,4,5,6,7,8,9,10,"jack", "queen", "king"].sample
+	number4=["ace",2,3,4,5,6,7,8,9,10,"jack", "queen", "king"].sample
+	number5=["ace",2,3,4,5,6,7,8,9,10,"jack", "queen", "king"].sample
+
+	suit1=["clubs", "diamonds", "hearts", "spades"].sample
+	suit2=["clubs", "diamonds", "hearts", "spades"].sample
+	suit3=["clubs", "diamonds", "hearts", "spades"].sample
+	suit4=["clubs", "diamonds", "hearts", "spades"].sample
+	suit5=["clubs", "diamonds", "hearts", "spades"].sample
+%>
+
+
+<body>
+
+<p>
+<img src="http://golearntocode.com/images/cards/<%= number1%>_of_<%= suit1 %>.png">
+<img src="http://golearntocode.com/images/cards/<%= number2%>_of_<%= suit2 %>.png">
+<img src="http://golearntocode.com/images/cards/<%= number3%>_of_<%= suit3 %>.png">
+<img src="http://golearntocode.com/images/cards/<%= number4%>_of_<%= suit4 %>.png">
+<img src="http://golearntocode.com/images/cards/<%= number5%>_of_<%= suit5 %>.png">
+</p>
+
+<%= yield %>
+
+</body>
+</html>
